@@ -1,0 +1,14 @@
+{
+    "name": "dfinery-unity-plugin",
+    "displayName": "Dfinery",
+    "description": "Dfinery Unity Plugin",
+    "version": "1.0.0",
+    "unity": "2019.4",
+	"homepage": "https://www.igaworks.com",
+	"author": {
+		"name": "IGAWorks",
+		"url": "https://github.com/IGAWorksDev/dfinery-unity-sdk"
+	},
+	"documentationUrl": "https://docs.dfinery.ai/developer-guide/platform/unity",
+	"changelogUrl": "https://docs.dfinery.ai/developer-guide/platform/unity/change-log"
+}
