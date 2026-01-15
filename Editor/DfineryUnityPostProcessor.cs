@@ -9,8 +9,10 @@ using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEditor.Android;
 using UnityEditor.Callbacks;
+#if UNITY_IOS
 using UnityEditor.iOS.Xcode;
 using UnityEditor.iOS.Xcode.Extensions;
+#endif
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -135,6 +137,7 @@ namespace DfineryPlugin.Editor
         }
 
         // ---------------- iOS Info.plist ----------------
+        #if UNITY_IOS
         [PostProcessBuild(999)]
         public static void OnPostprocessBuild(BuildTarget buildTarget, string path)
         {
@@ -166,7 +169,6 @@ namespace DfineryPlugin.Editor
             }
         }
 
-#if UNITY_IOS
         private const string NSE_NAME   = "DfineryNotificationService";
         private const string NSE_FOLDER = "DfineryNSE";
         private const string NSE_PLIST  = "Info.plist";
