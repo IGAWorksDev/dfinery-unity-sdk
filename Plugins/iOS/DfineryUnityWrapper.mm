@@ -109,4 +109,8 @@ void _dfineryGetPushToken(void) {
     [[DfineryUnitySharedInstance sharedInstance] sendPushTokenToUnity];
 }
 
+void _dfineryAttAuthorized(bool authorized) {
+    [[DfineryUnitySharedInstance sharedInstance] attAuthorized:authorized];
+}
+
 }

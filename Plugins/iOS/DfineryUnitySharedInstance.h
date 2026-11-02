@@ -30,4 +30,6 @@
 - (void)handleNotificationResponse:(UNNotificationResponse *)response;
 - (BOOL)canHandleForeground:(UNNotification *)notification completionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler;
 
+- (void)attAuthorized:(BOOL)authorized;
+
 @end 
