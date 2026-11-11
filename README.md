@@ -7,7 +7,7 @@ Unity용 Dfinery SDK입니다. Android 및 iOS 네이티브 SDK의 C# 인터페�
 
 ## 요구 사항
 
-- Unity 2019.4 이상
+- Unity 2022.3.72f1 이상 (iOS UIScene lifecycle 지원 필수)
 - External Dependency Manager (EDM4U 또는 UDM)
 
 ## 설치
@@ -103,6 +103,6 @@ Assets > External Dependency Manager > Android Resolver > Force Resolve
 **Swift Package Manager:**
 | 패키지 | 버전 |
 |--------|------|
-| [DfinerySDK](https://github.com/IGAWorksDev/dfinery-ios-sdk) | 2.6.0 |
+| [DfinerySDK](https://github.com/IGAWorksDev/dfinery-ios-sdk) | 2.6.1 |
 
 iOS Resolver 설정에서 CocoaPods 또는 Swift Package Manager 중 선택 가능합니다.

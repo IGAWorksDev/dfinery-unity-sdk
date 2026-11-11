@@ -11,7 +11,7 @@
         <iosPod name="DfinerySDK" version="2.5.1" addToAllTargets="true"/>
         <iosPod name="DfinerySDKServiceExtension" version="2.5.1" addToAllTargets="true"/>
     </iosPods>
-    <remoteSwiftPackage url="https://github.com/IGAWorksDev/dfinery-ios-sdk" version="2.6.0">
+    <remoteSwiftPackage url="https://github.com/IGAWorksDev/dfinery-ios-sdk" version="2.6.1">
         <swiftPackage name="DfinerySDK" replacesPod="DfinerySDK"/>
         <swiftPackage name="DfinerySDKServiceExtension" replacesPod="DfinerySDKServiceExtension"/>
     </remoteSwiftPackage>

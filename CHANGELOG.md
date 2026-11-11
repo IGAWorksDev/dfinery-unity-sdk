@@ -2,7 +2,7 @@
 <summary>EN</summary>
 
 
-## 1.1.0 (2026-11-02)
+## 2.0.0 (2026-11-11)
 
 ##### Added
 - Added `AttAuthorized(bool authorized)` API to notify ATT (App Tracking Transparency) authorization status to the SDK. [iOS]
@@ -11,6 +11,14 @@
 
 ##### Changed
 - Deprecated `DFConfig.IOS_LOG_ENABLE` in favor of `DFConfig.IOS_LOG_LEVEL`. [iOS]
+
+##### Compatibility
+- Verified compatibility with Xcode 27 and iOS 27 UIScene lifecycle requirements.
+- Dfinery SDK does not use deeplink/Universal Link APIs, so no SceneDelegate migration is required.
+- Push notification and SDK initialization APIs remain unaffected by the SceneDelegate transition.
+
+##### Notes
+- For iOS 27 / Xcode 27 builds, Unity 2022.3.72f1 or later is recommended for UIScene lifecycle support.
 
 ##### Updated
 - Updated README documentation with EDM and EDM4U installation guides.
@@ -21,7 +29,9 @@
   - Dfinery Android SDK 2.7.4
   - Dfinery Android Unity Extension 1.0.0
 - **iOS**
-  - Dfinery iOS SDK 2.5.1 (CocoaPods) / 2.6.0 (Swift Package Manager)
+  - Dfinery iOS SDK 2.5.1 (CocoaPods) / 2.6.1 (Swift Package Manager)
+
+---
 
 ## 1.0.1 (2026-01-15)
 
@@ -56,7 +66,7 @@
 <summary>KO</summary>
 
 
-## 1.1.0 (2026-11-02)
+## 2.0.0 (2026-11-11)
 
 ##### 추가됨
 - ATT (App Tracking Transparency) 권한 부여 상태를 SDK에 전달하는 `AttAuthorized(bool authorized)` API 추가. [iOS]
@@ -65,6 +75,14 @@
 
 ##### 변경됨
 - `DFConfig.IOS_LOG_ENABLE`이 deprecated 처리되었으며 `DFConfig.IOS_LOG_LEVEL` 사용 권장. [iOS]
+
+##### 호환성
+- Xcode 27 및 iOS 27 UIScene lifecycle 요구사항 호환성 검증 완료.
+- Dfinery SDK는 딥링크/Universal Link API를 사용하지 않으므로 SceneDelegate 마이그레이션 불필요.
+- Push notification 및 SDK 초기화 API는 SceneDelegate 전환의 영향을 받지 않음.
+
+##### 참고
+- iOS 27 / Xcode 27 빌드 시 UIScene lifecycle 지원을 위해 Unity 2022.3.72f1 이상 권장.
 
 ##### 업데이트
 - README 문서에 EDM 및 EDM4U 설치 가이드 추가.
@@ -75,7 +93,9 @@
   - Dfinery Android SDK 2.7.4
   - Dfinery Android Unity Extension 1.0.0
 - **iOS**
-  - Dfinery iOS SDK 2.5.1 (CocoaPods) / 2.6.0 (Swift Package Manager)
+  - Dfinery iOS SDK 2.5.1 (CocoaPods) / 2.6.1 (Swift Package Manager)
+
+---
 
 ## 1.0.1 (2026-01-15)
 
