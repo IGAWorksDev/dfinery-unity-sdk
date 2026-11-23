@@ -23,5 +23,6 @@ namespace DfineryPlugin {
         void DeleteNotificationChannel(string channelId);
         void CreateNotificationChannelGroup(Dictionary<string, object> properties);
         void DeleteNotificationChannelGroup(string channelGroupId);
+        void AttAuthorized(bool authorized);
     }
 }

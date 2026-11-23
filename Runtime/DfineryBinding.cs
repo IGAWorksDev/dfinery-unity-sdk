@@ -85,12 +85,24 @@ namespace DfineryPlugin {
 
     public static class DFConfig
     {
+        /// <summary>
+        /// Deprecated: Use IOS_LOG_LEVEL instead.
+        /// </summary>
+        [Obsolete("Use IOS_LOG_LEVEL instead.")]
         public const string IOS_LOG_ENABLE = "df_config_log_enable";
+        public const string IOS_LOG_LEVEL = "df_config_log_level";
         public const string ANDROID_LOG_ENABLE = "android_log_enable";
         public const string ANDROID_LOG_LEVEL = "android_log_level";
         public const string ANDROID_NOTIFICATION_ICON_NAME = "android_notification_icon_name";
         public const string ANDROID_NOTIFICATION_CHANNEL_ID = "android_notification_channel_id";
         public const string ANDROID_NOTIFICATION_ACCENT_COLOR = "android_notification_accent_color";
+    }
+    public static class DFIOSLogLevel {
+        public const int VERBOSE = 2;
+        public const int DEBUG = 3;
+        public const int INFO = 4;
+        public const int WARN = 5;
+        public const int ERROR = 6;
     }
     public static class DFAndroidLogLevel {
         public const int VERBOSE = 2;
@@ -264,6 +276,11 @@ namespace DfineryPlugin {
         public static void DeleteNotificationChannelGroup(string channelGroupId) {
 #if UNITY_ANDROID
             Binding.DeleteNotificationChannelGroup(channelGroupId);
+#endif
+        }
+        public static void AttAuthorized(bool authorized) {
+#if UNITY_IOS && !UNITY_EDITOR
+            Binding.AttAuthorized(authorized);
 #endif
         }
         private static string GetIdentity(DFIdentity identity) {

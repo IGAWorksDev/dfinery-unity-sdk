@@ -206,5 +206,9 @@ public class DfineryAndroid : IDfinery {
     public void DeleteNotificationChannelGroup(string channelGroupId) {
         DfineryUnityBridge.Call("deleteNotificationChannelGroup", DfineryUnityActivity, channelGroupId);
     }
+
+    public void AttAuthorized(bool authorized) {
+        // iOS only API - no-op on Android
+    }
 }
 #endif

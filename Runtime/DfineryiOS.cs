@@ -47,6 +47,9 @@ namespace DfineryPlugin {
         [DllImport("__Internal")]
         private static extern void _dfineryGetPushToken();
 
+        [DllImport("__Internal")]
+        private static extern void _dfineryAttAuthorized(bool authorized);
+
         private static DFGetPushTokenCallbackConnector _pushTokenCallbackConnector;
 
         public void Init(string serviceId) {
@@ -136,6 +139,10 @@ namespace DfineryPlugin {
         }
 
         public void DeleteNotificationChannelGroup(string channelGroupId) {
+        }
+
+        public void AttAuthorized(bool authorized) {
+            _dfineryAttAuthorized(authorized);
         }
     }
 }

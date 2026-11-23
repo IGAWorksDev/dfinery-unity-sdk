@@ -2,6 +2,36 @@
 <summary>EN</summary>
 
 
+## 2.0.0 (2026-11-23)
+
+##### Added
+- Added `AttAuthorized(bool authorized)` API to notify ATT (App Tracking Transparency) authorization status to the SDK. [iOS]
+- Added `DFConfig.IOS_LOG_LEVEL` configuration key and `DFIOSLogLevel` constants for iOS log level control. [iOS]
+- Added Swift Package Manager support for iOS native dependencies.
+- Added `didFailToRegisterForRemoteNotificationsWithError` swizzle for push token registration failure diagnostics. [iOS]
+
+##### Changed
+- Deprecated `DFConfig.IOS_LOG_ENABLE` in favor of `DFConfig.IOS_LOG_LEVEL`. [iOS]
+
+##### Fixed
+- Fixed push token registration not being called when SDK is initialized manually from Unity code instead of Info.plist configuration. [iOS]
+- Decoupled `registerForRemoteNotifications` from SDK initialization to support both auto and manual initialization flows. [iOS]
+
+##### Compatibility
+- Verified compatibility with Xcode 27 and iOS 27 UIScene lifecycle requirements.
+- Dfinery SDK does not use deeplink/Universal Link APIs, so no SceneDelegate migration is required.
+- Push notification and SDK initialization APIs remain unaffected by the SceneDelegate transition.
+
+##### Versions
+
+- **Android**
+  - Dfinery Android SDK 2.7.4
+  - Dfinery Android Unity Extension 1.0.0
+- **iOS**
+  - Dfinery iOS SDK 2.5.1 (CocoaPods) / 2.6.1 (Swift Package Manager)
+
+---
+
 ## 1.0.1 (2026-01-15)
 
 ##### Fixed
@@ -34,6 +64,36 @@
 <details open>
 <summary>KO</summary>
 
+
+## 2.0.0 (2026-11-23)
+
+##### 추가됨
+- ATT (App Tracking Transparency) 권한 부여 상태를 SDK에 전달하는 `AttAuthorized(bool authorized)` API 추가. [iOS]
+- iOS 로그 레벨 제어를 위한 `DFConfig.IOS_LOG_LEVEL` 설정 키 및 `DFIOSLogLevel` 상수 추가. [iOS]
+- iOS 네이티브 의존성에 Swift Package Manager 지원 추가.
+- 푸시 토큰 등록 실패 진단을 위한 `didFailToRegisterForRemoteNotificationsWithError` swizzle 추가. [iOS]
+
+##### 변경됨
+- `DFConfig.IOS_LOG_ENABLE`이 deprecated 처리되었으며 `DFConfig.IOS_LOG_LEVEL` 사용 권장. [iOS]
+
+##### 고쳐짐
+- Info.plist 설정 대신 Unity 코드에서 수동으로 SDK를 초기화할 때 푸시 토큰 등록이 호출되지 않는 문제 수정. [iOS]
+- 자동 및 수동 초기화 흐름을 모두 지원하도록 `registerForRemoteNotifications`를 SDK 초기화와 분리. [iOS]
+
+##### 호환성
+- Xcode 27 및 iOS 27 UIScene lifecycle 요구사항 호환성 검증 완료.
+- Dfinery SDK는 딥링크/Universal Link API를 사용하지 않으므로 SceneDelegate 마이그레이션 불필요.
+- Push notification 및 SDK 초기화 API는 SceneDelegate 전환의 영향을 받지 않음.
+
+##### 버전 정보
+
+- **Android**
+  - Dfinery Android SDK 2.7.4
+  - Dfinery Android Unity Extension 1.0.0
+- **iOS**
+  - Dfinery iOS SDK 2.5.1 (CocoaPods) / 2.6.1 (Swift Package Manager)
+
+---
 
 ## 1.0.1 (2026-01-15)
 

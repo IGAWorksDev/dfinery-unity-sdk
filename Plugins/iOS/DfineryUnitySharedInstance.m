@@ -184,4 +184,19 @@ static dispatch_once_t onceToken;
     }
 }
 
+- (void)attAuthorized:(BOOL)authorized {
+    // attAuthorized API requires DfinerySDK 2.6.0+
+    // Uses runtime selector check for backward compatibility
+    SEL selector = @selector(attAuthorized:);
+    id target = [Dfinery shared];
+    if ([target respondsToSelector:selector]) {
+        NSMethodSignature *signature = [target methodSignatureForSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:target];
+        [invocation setSelector:selector];
+        [invocation setArgument:&authorized atIndex:2];
+        [invocation invoke];
+    }
+}
+
 @end 
