@@ -2,7 +2,7 @@
 <summary>EN</summary>
 
 
-## 2.0.0 (2026-11-11)
+## 2.0.0 (2026-11-23)
 
 ##### Added
 - Added `AttAuthorized(bool authorized)` API to notify ATT (App Tracking Transparency) authorization status to the SDK. [iOS]
@@ -65,7 +65,7 @@
 <summary>KO</summary>
 
 
-## 2.0.0 (2026-11-11)
+## 2.0.0 (2026-11-23)
 
 ##### 추가됨
 - ATT (App Tracking Transparency) 권한 부여 상태를 SDK에 전달하는 `AttAuthorized(bool authorized)` API 추가. [iOS]
